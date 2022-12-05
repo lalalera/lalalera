@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="img/fav/android-chrome-512x512.png">
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+<body onload="slider()">
+    <header>
+        <div class="container">
+           
+            <!--Делаю меню и лого-->
+             <div class="heading clearfix"> <!-- общий контейнер для лого и меню. Clearfix далее в CSS-->
+                 <img src="../img/fav/favicon-32x32.png" alt="smiley face" class="logo">
+                   <nav class="navbar">
+                       <ul class="nav-menu">
+                          <li>
+                             <a href="../index.html">Главная</a>
+                          </li>
+                          <li>
+                             <a href="../pages/page1.html">Обо мне</a>
+                          </li>
+                          <li class="active" >
+                              <a href="#">Фотогалерея</a>
+                          </li>
+                           <li>
+                              <a href="../pages/page3.html">Контакты</a>
+                          </li>
+                      </ul>
+                      
+                   </nav>
+                   
+             </div>
+        </div>
+
+        <div class="middle-container">
+            <!-- Добавляю карусель фото-->
+    <section id="portfolio">
+      <div class="container">
+          <div class="title">
+              <h2>
+                  Фотогалерея
+              </h2>
+              <img id="slideshow" width="700" height="470"> 
+          </div>
+    <script type="text/javascript">
+        var i = 0;
+        function change_image(){
+        document.getElementById("slideshow").src = "img" +(i++ % 3)+".jpg";
+        }
+        function slider(){
+            setInterval(change_image, 1000);
+        }
+    </script>
+
+</body>
+</html>
+    
+
+      </div>
+  </section>
+        </div> 
+    </header>
+   
+     
+    
+</body>
+</html>
